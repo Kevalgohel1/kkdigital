@@ -146,7 +146,7 @@ function CapsuleBtn({
 
   return (
     <a
-      href={href || "#contact"}
+      href={href || "/contact"}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={base}
@@ -612,7 +612,7 @@ export default function Home() {
                 { label: "Services", href: "#services" },
                 { label: "How It Works", href: "#process" },
                 { label: "Pricing", href: "#pricing" },
-                { label: "Contact", href: "#contact" },
+                { label: "Contact", href: "/contact" },
               ].map((l) => (
                 <a
                   key={l.label}
@@ -634,7 +634,7 @@ export default function Home() {
                   {l.label}
                 </a>
               ))}
-              <CapsuleBtn primary href="#contact" style={{ padding: "10px 24px", fontSize: 14 }}>
+              <CapsuleBtn primary href="/contact" style={{ padding: "10px 24px", fontSize: 14 }}>
                 Book a Call
               </CapsuleBtn>
             </div>
@@ -760,7 +760,7 @@ export default function Home() {
 
               {/* CTAs */}
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-                <CapsuleBtn primary href="#contact">
+                <CapsuleBtn primary href="/contact">
                   Book Free 20-min Call {ico.arrow}
                 </CapsuleBtn>
                 <CapsuleBtn href="#services">See How It Works</CapsuleBtn>
@@ -1238,7 +1238,7 @@ export default function Home() {
                   </div>
                   <CapsuleBtn
                     primary
-                    href="#contact"
+                    href="/contact"
                     style={{
                       marginTop: 28,
                       width: "100%",
@@ -1327,7 +1327,7 @@ export default function Home() {
                   </div>
                   <CapsuleBtn
                     primary
-                    href="#contact"
+                    href="/contact"
                     style={{
                       marginTop: 28,
                       width: "100%",
