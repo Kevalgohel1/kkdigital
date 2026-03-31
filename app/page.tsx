@@ -609,8 +609,8 @@ export default function Home() {
               style={{ display: "flex", alignItems: "center", gap: 32 }}
             >
               {[
-                { label: "Services", href: "#services" },
-                { label: "How It Works", href: "#process" },
+                { label: "Services", href: "/services" },
+                { label: "About", href: "/about" },
                 { label: "Pricing", href: "#pricing" },
                 { label: "Contact", href: "/contact" },
               ].map((l) => (
