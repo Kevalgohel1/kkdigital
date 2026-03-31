@@ -435,16 +435,16 @@ const STEPS = [
 ];
 
 const INDUSTRIES = [
-  "Dental Clinics",
-  "Hair Salons",
-  "Beauty Spas",
-  "Hospitals",
-  "Real Estate",
-  "Legal Firms",
-  "Coaching Institutes",
-  "Nail Studios",
-  "Zahnarztpraxen",
-  "Tierarztpraxen",
+  { name: "Dental Clinics", emoji: "🦷", desc: "AI receptionist + patient reactivation" },
+  { name: "Hair Salons", emoji: "💇", desc: "Re-booking reminders + review engine" },
+  { name: "Beauty Spas", emoji: "💆", desc: "VIP flows + loyalty automation" },
+  { name: "Hospitals", emoji: "🏥", desc: "Patient reminders + AI intake" },
+  { name: "Real Estate", emoji: "🏠", desc: "Lead qualification + follow-up bot" },
+  { name: "Legal Firms", emoji: "⚖️", desc: "Case status bot + court reminders" },
+  { name: "Coaching Institutes", emoji: "📚", desc: "Enrollment nurture + attendance" },
+  { name: "Nail Studios", emoji: "💅", desc: "Appointment reminders + reviews" },
+  { name: "Zahnarztpraxen", emoji: "🇩🇪", desc: "KI-Rezeptionist auf Deutsch" },
+  { name: "Tierarztpraxen", emoji: "🐾", desc: "Termin-Erinnerungen + Nachsorge" },
 ];
 
 /* ═══════════════════════════════════════════
@@ -1089,6 +1089,86 @@ export default function Home() {
               }}
             >
               {INDUSTRIES.map((ind, i) => (
+                <GlassCard
+                  key={i}
+                  style={{
+                    padding: "22px 16px",
+                    textAlign: "center",
+                    opacity: industriesAnim.visible[i] ? 1 : 0,
+                    transform: industriesAnim.visible[i]
+                      ? "translateY(0)"
+                      : "translateY(16px)",
+                    transition: `all 0.5s cubic-bezier(0.23,1,0.32,1)`,
+                  }}
+                >
+                  <div style={{ fontSize: 28, marginBottom: 8 }}>{ind.emoji}</div>
+                  <div
+                    style={{
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: P.textDark,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {ind.name}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 11,
+                      color: P.muted,
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {ind.desc}
+                  </div>
+                </GlassCard>
+              ))}((ind, i) => (
+                <GlassCard
+                  key={i}
+                  style={{
+                    padding: "18px 16px",
+                    textAlign: "center",
+                    opacity: industriesAnim.visible[i] ? 1 : 0,
+                    transform: industriesAnim.visible[i]
+                      ? "translateY(0)"
+                      : "translateY(16px)",
+                    transition: `all 0.5s cubic-bezier(0.23,1,0.32,1)`,
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: P.textDark,
+                    }}
+                  >
+                    {ind}
+                  </span>
+                </GlassCard>
+              ))}((ind, i) => (
+                <GlassCard
+                  key={i}
+                  style={{
+                    padding: "18px 16px",
+                    textAlign: "center",
+                    opacity: industriesAnim.visible[i] ? 1 : 0,
+                    transform: industriesAnim.visible[i]
+                      ? "translateY(0)"
+                      : "translateY(16px)",
+                    transition: `all 0.5s cubic-bezier(0.23,1,0.32,1)`,
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: P.textDark,
+                    }}
+                  >
+                    {ind}
+                  </span>
+                </GlassCard>
+              ))}((ind, i) => (
                 <GlassCard
                   key={i}
                   style={{
