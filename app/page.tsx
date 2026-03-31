@@ -1556,10 +1556,10 @@ export default function Home() {
                 India + Germany
               </p>
               <p style={{ fontSize: 14, color: P.muted, marginBottom: 10 }}>
-                WhatsApp: +91 XXXXX XXXXX
+                WhatsApp: +91 80003 09011
               </p>
               <p style={{ fontSize: 14, color: P.muted }}>
-                hello@kkdigital.in
+                digitalkeval1@gmail.com
               </p>
             </div>
           </div>
