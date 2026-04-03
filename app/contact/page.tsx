@@ -706,7 +706,7 @@ export default function Contact() {
                             Email
                           </p>
                           <p style={{ fontSize: 13, color: P.muted }}>
-                            digitalkeval1@gmail.com
+                            cogniado@gmail.com
                           </p>
                         </div>
                       </div>

@@ -349,7 +349,7 @@ export default function Home() {
         <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: scrolled ? "10px 0" : "18px 0", background: scrolled ? "rgba(255, 247, 237, 0.72)" : "transparent", backdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", WebkitBackdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", borderBottom: scrolled ? `1px solid ${P.border}` : "1px solid transparent", transition: "all 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
           <div style={{ ...wrap, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-              <div style={{ width: 36, height: 36, borderRadius: 10, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#fff", boxShadow: "0 2px 10px rgba(59,130,246,0.2)" }}>C</div>
+              <img src="/logo.png" alt="Cogniado" style={{ width: 32, height: 32, borderRadius: 8, objectFit: "cover" }} />
               <span style={{ fontSize: 18, fontWeight: 800, color: P.textDark, letterSpacing: "-0.02em" }}>Cogniado</span>
             </a>
 
@@ -656,7 +656,7 @@ export default function Home() {
               <p style={{ fontSize: 13, fontWeight: 700, background: P.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 16, textTransform: "uppercase", letterSpacing: "0.08em" }}>Contact</p>
               <p style={{ fontSize: 14, color: P.muted, marginBottom: 10 }}>India + Germany</p>
               <p style={{ fontSize: 14, color: P.muted, marginBottom: 10 }}>WhatsApp: +91 8000309011</p>
-              <p style={{ fontSize: 14, color: P.muted }}>digitalkeval1@gmail.com</p>
+              <p style={{ fontSize: 14, color: P.muted }}>cogniado@gmail.com</p>
             </div>
           </div>
           <div style={{ ...wrap, marginTop: 36, paddingTop: 20, borderTop: `1px solid ${P.border}`, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
