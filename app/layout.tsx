@@ -20,6 +20,9 @@ export const metadata: Metadata = {
       "Never miss a patient call again. AI voice agents, WhatsApp automation, and review engines for clinics and service businesses.",
     type: "website",
   },
+  verification: {
+    google: "VW4AiBzVspij6Q4i-RfCccazE5WwvLcXEZVFWiz88JI",
+  },
 };
 
 export default function RootLayout({
