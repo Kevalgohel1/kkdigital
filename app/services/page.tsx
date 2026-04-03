@@ -273,8 +273,8 @@ export default function Services() {
         <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: scrolled ? "10px 0" : "18px 0", background: scrolled ? "rgba(255, 247, 237, 0.72)" : "transparent", backdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", WebkitBackdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", borderBottom: scrolled ? `1px solid ${P.border}` : "1px solid transparent", transition: "all 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
           <div style={{ ...wrap, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-              <div style={{ width: 36, height: 36, borderRadius: 10, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#fff", boxShadow: "0 2px 10px rgba(59,130,246,0.2)" }}>KK</div>
-              <span style={{ fontSize: 18, fontWeight: 800, color: P.textDark, letterSpacing: "-0.02em" }}>KK Digital</span>
+              <div style={{ width: 36, height: 36, borderRadius: 10, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#fff", boxShadow: "0 2px 10px rgba(59,130,246,0.2)" }}>C</div>
+              <span style={{ fontSize: 18, fontWeight: 800, color: P.textDark, letterSpacing: "-0.02em" }}>Cogniado</span>
             </a>
             <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
               <a href="/" style={{ color: P.muted, textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Home</a>
@@ -442,7 +442,7 @@ export default function Services() {
         {/* ═══ FOOTER ═══ */}
         <footer style={{ position: "relative", zIndex: 1, background: "rgba(255,255,255,0.5)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderTop: `1px solid ${P.border}`, padding: "32px 0" }}>
           <div style={{ ...wrap, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <p style={{ fontSize: 13, color: P.muted }}>© 2026 KK Digital. AI automation agency. India & Germany.</p>
+            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation agency. India & Germany.</p>
             <p style={{ fontSize: 13, color: P.muted }}>Built with AI. Powered by results.</p>
           </div>
         </footer>

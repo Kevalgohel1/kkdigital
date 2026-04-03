@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "KK Digital — AI Automation for Service Businesses";
+export const alt = "Cogniado — AI Automation for Service Businesses";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -80,7 +80,7 @@ export default async function Image() {
               letterSpacing: "-0.02em",
             }}
           >
-            KK Digital
+            Cogniado
           </span>
         </div>
 

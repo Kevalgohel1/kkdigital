@@ -282,7 +282,7 @@ export default function About() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                KK Digital
+                Cogniado
               </span>
             </a>
 
@@ -675,7 +675,7 @@ export default function About() {
                     </span>
                   </p>
                   <p>
-                    That&apos;s KK Digital. We&apos;re not selling AI for the
+                    That&apos;s Cogniado. We&apos;re not selling AI for the
                     sake of AI. We&apos;re performance marketers who measure
                     everything in revenue recovered, patients booked, and reviews
                     collected. If it doesn&apos;t make you money, we don&apos;t
@@ -940,7 +940,7 @@ export default function About() {
             }}
           >
             <p style={{ fontSize: 13, color: P.muted }}>
-              © 2026 KK Digital. AI automation agency. India & Germany.
+              © 2026 Cogniado. AI automation agency. India & Germany.
             </p>
             <p style={{ fontSize: 13, color: P.muted }}>
               Built with AI. Powered by results.

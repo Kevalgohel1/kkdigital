@@ -318,7 +318,6 @@ export default function Home() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { background: #FFF7ED; font-family: ${FONT}; }
@@ -350,8 +349,8 @@ export default function Home() {
         <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: scrolled ? "10px 0" : "18px 0", background: scrolled ? "rgba(255, 247, 237, 0.72)" : "transparent", backdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", WebkitBackdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", borderBottom: scrolled ? `1px solid ${P.border}` : "1px solid transparent", transition: "all 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
           <div style={{ ...wrap, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-              <div style={{ width: 36, height: 36, borderRadius: 10, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#fff", boxShadow: "0 2px 10px rgba(59,130,246,0.2)" }}>KK</div>
-              <span style={{ fontSize: 18, fontWeight: 800, color: P.textDark, letterSpacing: "-0.02em" }}>KK Digital</span>
+              <div style={{ width: 36, height: 36, borderRadius: 10, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#fff", boxShadow: "0 2px 10px rgba(59,130,246,0.2)" }}>C</div>
+              <span style={{ fontSize: 18, fontWeight: 800, color: P.textDark, letterSpacing: "-0.02em" }}>Cogniado</span>
             </a>
 
             {/* Desktop nav */}
@@ -642,8 +641,8 @@ export default function Home() {
           <div className="grid-footer" style={{ ...wrap, display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48 }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
-                <div style={{ width: 32, height: 32, borderRadius: 8, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 800, color: "#fff" }}>KK</div>
-                <span style={{ fontSize: 16, fontWeight: 800, color: P.textDark }}>KK Digital</span>
+                <div style={{ width: 32, height: 32, borderRadius: 8, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 800, color: "#fff" }}>C</div>
+                <span style={{ fontSize: 16, fontWeight: 800, color: P.textDark }}>Cogniado</span>
               </div>
               <p style={{ fontSize: 14, color: P.muted, lineHeight: 1.7, maxWidth: 340 }}>AI automation for service businesses in India and Germany. Built by performance marketers who understand revenue, not just technology.</p>
             </div>
@@ -661,7 +660,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ ...wrap, marginTop: 36, paddingTop: 20, borderTop: `1px solid ${P.border}`, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <p style={{ fontSize: 13, color: P.muted }}>© 2026 KK Digital. AI automation agency. India & Germany.</p>
+            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation agency. India & Germany.</p>
             <p style={{ fontSize: 13, color: P.muted }}>Built with AI. Powered by results.</p>
           </div>
         </footer>

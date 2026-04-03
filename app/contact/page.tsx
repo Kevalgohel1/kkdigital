@@ -279,7 +279,7 @@ export default function Contact() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                KK Digital
+                Cogniado
               </span>
             </a>
 
@@ -464,7 +464,7 @@ export default function Contact() {
                       <input
                         type="hidden"
                         name="subject"
-                        value="New Lead from KK Digital Website"
+                        value="New Lead from Cogniado Website"
                       />
 
                       <div style={{ marginBottom: 18 }}>
@@ -829,7 +829,7 @@ export default function Contact() {
             }}
           >
             <p style={{ fontSize: 13, color: P.muted }}>
-              © 2026 KK Digital. AI automation agency. India & Germany.
+              © 2026 Cogniado. AI automation agency. India & Germany.
             </p>
             <p style={{ fontSize: 13, color: P.muted }}>
               Built with AI. Powered by results.

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://kkdigital.vercel.app/sitemap.xml",
+    sitemap: "https://cogniado.com/sitemap.xml",
   };
 }
