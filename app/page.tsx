@@ -260,6 +260,13 @@ const INDUSTRIES = [
   { name: "Tierarztpraxen", emoji: "🐾", desc: "Termin-Erinnerungen + Nachsorge" },
 ];
 
+const NAV_LINKS = [
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "/contact" },
+];
+
 /* ═══════════════════════════════════════════
    MAIN PAGE
    ═══════════════════════════════════════════ */
@@ -283,6 +290,16 @@ export default function Home() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Close mobile menu on route-style navigation
+  useEffect(() => {
+    if (mobileMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileMenu]);
 
   useEffect(() => {
     const word = NICHES[nicheIdx];
@@ -312,8 +329,10 @@ export default function Home() {
         @keyframes orbC { 0%,100% { transform: translate(0,0); } 33% { transform: translate(30px,40px); } 66% { transform: translate(-20px,-30px); } }
         @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
         @keyframes gradShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .mobile-menu-btn { display: none !important; }
         @media (max-width: 768px) {
           .hide-mobile { display: none !important; }
+          .mobile-menu-btn { display: flex !important; }
           .grid-services { grid-template-columns: 1fr !important; }
           .grid-steps { grid-template-columns: 1fr !important; }
           .grid-stats { grid-template-columns: repeat(2, 1fr) !important; }
@@ -334,22 +353,118 @@ export default function Home() {
               <div style={{ width: 36, height: 36, borderRadius: 10, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, color: "#fff", boxShadow: "0 2px 10px rgba(59,130,246,0.2)" }}>KK</div>
               <span style={{ fontSize: 18, fontWeight: 800, color: P.textDark, letterSpacing: "-0.02em" }}>KK Digital</span>
             </a>
+
+            {/* Desktop nav */}
             <div className="hide-mobile" style={{ display: "flex", alignItems: "center", gap: 32 }}>
-              {[
-                { label: "Services", href: "/services" },
-                { label: "About", href: "/about" },
-                { label: "Pricing", href: "#pricing" },
-                { label: "Contact", href: "/contact" },
-              ].map((l) => (
+              {NAV_LINKS.map((l) => (
                 <a key={l.label} href={l.href} style={{ color: P.muted, textDecoration: "none", fontSize: 14, fontWeight: 500, transition: "color 0.3s" }} onMouseEnter={(e) => (e.currentTarget.style.color = P.textDark)} onMouseLeave={(e) => (e.currentTarget.style.color = P.muted as string)}>{l.label}</a>
               ))}
               <CapsuleBtn primary href="/contact" style={{ padding: "10px 24px", fontSize: 14 }}>Book a Call</CapsuleBtn>
             </div>
-            <button onClick={() => setMobileMenu(!mobileMenu)} style={{ display: "none", background: "none", border: "none", cursor: "pointer", padding: 8 }} className="show-mobile">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={P.textDark} strokeWidth="2" strokeLinecap="round"><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
+
+            {/* Hamburger button — visible on mobile only */}
+            <button
+              className="mobile-menu-btn"
+              onClick={() => setMobileMenu(!mobileMenu)}
+              aria-label="Toggle menu"
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: 8,
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 110,
+              }}
+            >
+              {mobileMenu ? (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={P.textDark} strokeWidth="2" strokeLinecap="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              ) : (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={P.textDark} strokeWidth="2" strokeLinecap="round">
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+              )}
             </button>
           </div>
         </nav>
+
+        {/* ═══ MOBILE MENU PANEL ═══ */}
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 99,
+            background: "rgba(255, 247, 237, 0.97)",
+            backdropFilter: "blur(32px) saturate(1.5)",
+            WebkitBackdropFilter: "blur(32px) saturate(1.5)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 8,
+            opacity: mobileMenu ? 1 : 0,
+            pointerEvents: mobileMenu ? "auto" : "none",
+            transition: "opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1)",
+          }}
+        >
+          {NAV_LINKS.map((l, i) => (
+            <a
+              key={l.label}
+              href={l.href}
+              onClick={() => setMobileMenu(false)}
+              style={{
+                fontSize: 22,
+                fontWeight: 700,
+                color: P.textDark,
+                textDecoration: "none",
+                padding: "14px 28px",
+                borderRadius: 16,
+                transition: "all 0.3s ease",
+                letterSpacing: "-0.01em",
+                opacity: mobileMenu ? 1 : 0,
+                transform: mobileMenu ? "translateY(0)" : "translateY(16px)",
+                transitionDelay: mobileMenu ? `${i * 0.06}s` : "0s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "rgba(59, 130, 246, 0.06)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+              }}
+            >
+              {l.label}
+            </a>
+          ))}
+          <div style={{
+            marginTop: 12,
+            opacity: mobileMenu ? 1 : 0,
+            transform: mobileMenu ? "translateY(0)" : "translateY(16px)",
+            transition: "all 0.4s cubic-bezier(0.23, 1, 0.32, 1)",
+            transitionDelay: mobileMenu ? `${NAV_LINKS.length * 0.06}s` : "0s",
+          }}>
+            <CapsuleBtn primary href="/contact" style={{ fontSize: 17, padding: "14px 36px" }}>
+              Book a Call {ico.arrow}
+            </CapsuleBtn>
+          </div>
+          <p style={{
+            fontSize: 13,
+            color: P.muted,
+            marginTop: 24,
+            opacity: mobileMenu ? 1 : 0,
+            transition: "opacity 0.4s ease",
+            transitionDelay: mobileMenu ? "0.4s" : "0s",
+          }}>
+            India + Germany · Hindi · English · Deutsch
+          </p>
+        </div>
 
         {/* ═══ HERO ═══ */}
         <section style={{ position: "relative", zIndex: 1, paddingTop: 160, paddingBottom: 60 }}>
