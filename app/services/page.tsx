@@ -110,13 +110,13 @@ const CORE_SERVICES = [
     color: P.accent1,
     tagBg: "#EFF6FF",
     tagBorder: "#BFDBFE",
-    desc: "Your AI receptionist answers every call 24/7 in Hindi, English, or German. Books appointments directly into Google Calendar, sends WhatsApp confirmation + 2hr reminder. Missed call? WhatsApp follow-up in 60 seconds.",
+    desc: "Your AI receptionist answers every call 24/7 in English and major European languages. Books appointments directly into Google Calendar, sends WhatsApp confirmation + 2hr reminder. Missed call? WhatsApp follow-up in 60 seconds.",
     features: [
       "24/7 call answering — no missed patients",
       "Real-time Google Calendar booking mid-call",
       "WhatsApp confirmation + 2hr reminder",
       "Missed call → WhatsApp in 60 seconds",
-      "Hindi, English, and German voice support",
+      "English and major European language voice support",
       "Transfers complex queries to your team",
     ],
   },
@@ -195,14 +195,14 @@ const CORE_SERVICES = [
     color: P.accent3,
     tagBg: "#FFF7ED",
     tagBorder: "#FED7AA",
-    desc: "Incoming leads from any source — Facebook, Google, JustDial — verified in 60 seconds. AI qualifies via WhatsApp conversation, scores 1–10. Hot leads go to your team with full context instantly.",
+    desc: "Incoming leads from any source — Facebook, Google, LinkedIn — verified in 60 seconds. AI qualifies via WhatsApp conversation, scores 1–10. Hot leads go to your team with full context instantly.",
     features: [
       "60-second lead verification (fake number check)",
       "WhatsApp qualification conversation",
       "Lead scoring: 1–10 with full context",
       "Hot leads (7+) → instant team notification",
       "Warm leads → 10-week nurture drip",
-      "Works with Facebook, Google, JustDial, IndiaMART",
+      "Works with Facebook, Google, LinkedIn, and major European lead platforms",
     ],
   },
 ];
@@ -216,14 +216,12 @@ const INDUSTRIES = [
   { name: "Legal Firms", emoji: "⚖️", desc: "Case status bot, document checklist, court date reminders" },
   { name: "Coaching Institutes", emoji: "📚", desc: "AI study assistant, attendance reminders, enrollment nurture" },
   { name: "Nail Studios", emoji: "💅", desc: "Appointment reminders, loyalty program, review collection" },
-  { name: "Zahnarztpraxen", emoji: "🇩🇪", desc: "KI-Rezeptionist auf Deutsch, Patienten-Reaktivierung" },
-  { name: "Tierarztpraxen", emoji: "🐾", desc: "Termin-Erinnerungen, Nachsorge-Bot, Bewertungs-Engine" },
 ];
 
 const TECH_STACK = [
   { name: "VAPI", role: "Voice infrastructure — inbound + outbound calls" },
   { name: "Claude API", role: "AI brain — natural language understanding" },
-  { name: "ElevenLabs", role: "Voice cloning — Priya (Hindi/EN), Anna (DE)" },
+  { name: "ElevenLabs", role: "Voice cloning — multilingual European voices (EN, DE, NL, FR)" },
   { name: "n8n", role: "Automation backbone — all workflows" },
   { name: "WATI / Twilio", role: "WhatsApp Business API" },
   { name: "Google Calendar", role: "Real-time booking mid-call" },
@@ -432,7 +430,7 @@ export default function Services() {
                   Book Your Free Call →
                 </a>
                 <p style={{ fontSize: 13, color: P.muted, marginTop: 16 }}>
-                  India + Germany · Hindi · English · Deutsch
+                  Available across Europe · GDPR-compliant
                 </p>
               </div>
             </Reveal>
@@ -442,7 +440,7 @@ export default function Services() {
         {/* ═══ FOOTER ═══ */}
         <footer style={{ position: "relative", zIndex: 1, background: "rgba(255,255,255,0.5)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderTop: `1px solid ${P.border}`, padding: "32px 0" }}>
           <div style={{ ...wrap, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation agency. India & Germany.</p>
+            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation for European service businesses.</p>
             <p style={{ fontSize: 13, color: P.muted }}>Built with AI. Powered by results.</p>
           </div>
         </footer>
