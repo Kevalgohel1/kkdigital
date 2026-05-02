@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import CookieConsent from "./CookieConsent";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -39,20 +39,8 @@ export default function RootLayout({
         />
       </head>
       <body style={{ margin: 0 }}>
-        {/* Google Analytics 4 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-YY8JNZNP6D"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-YY8JNZNP6D');
-          `}
-        </Script>
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
