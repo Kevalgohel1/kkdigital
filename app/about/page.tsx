@@ -257,23 +257,7 @@ export default function About() {
                 textDecoration: "none",
               }}
             >
-              <div
-                style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: 10,
-                  background: P.grad,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 13,
-                  fontWeight: 800,
-                  color: "#fff",
-                  boxShadow: "0 2px 10px rgba(59,130,246,0.2)",
-                }}
-              >
-                KK
-              </div>
+              <img src="/logo.png" alt="Cogniado" style={{ width: 120, height: 36, objectFit: "contain" }} />
               <span
                 style={{
                   fontSize: 18,
@@ -643,7 +627,7 @@ export default function About() {
                   }}
                 >
                   <p>
-                    We sat next to each other at an office in Ahmedabad, running
+                    We sat next to each other at an office in Rajkot, Gujarat, running
                     performance marketing for an e-commerce company. Google Ads,
                     Meta campaigns, ROAS targets — the works.
                   </p>
@@ -655,11 +639,12 @@ export default function About() {
                     have the systems.
                   </p>
                   <p>
-                    A dentist in Ahmedabad told us he was losing ₹2–3 lakh a
-                    month just from missed calls after hours. His receptionist
-                    couldn&apos;t work 24/7. His Google rating was stuck at 3.8
-                    stars. Patients who hadn&apos;t visited in 6 months? Gone
-                    forever.
+                    A dentist friend was losing the equivalent of €4,000 a
+                    month just from missed calls alone. The existing software
+                    vendors weren&apos;t helping. That was the moment we knew
+                    this needed to be built differently — and that European
+                    service businesses, especially clinics, would need it
+                    most.
                   </p>
                   <p>
                     We thought:{" "}
@@ -735,13 +720,13 @@ export default function About() {
                 {
                   emoji: "📊",
                   title: "Revenue-First Thinking",
-                  desc: "We don't build cool tech. We build systems that recover missed revenue from Day 1. Every workflow is measured in ₹ returned.",
+                  desc: "We don&apos;t build cool tech. We build systems that recover missed revenue from Day 1. Every workflow is measured in € recovered.",
                   color: P.accent1,
                 },
                 {
                   emoji: "🌏",
-                  title: "India + Germany",
-                  desc: "We speak Hindi, English, and German. We understand ₹40K/month budgets and €2,000/month expectations. Both markets, one team.",
+                  title: "Built for Europe, From Day One",
+                  desc: "GDPR-compliant infrastructure, EUR pricing, and an understanding of European service-business margins. We serve clinics, salons, and agencies across Germany, Austria, the Netherlands, Ireland, and the Nordics.",
                   color: P.accent3,
                 },
                 {
@@ -765,7 +750,7 @@ export default function About() {
                 {
                   emoji: "🛡️",
                   title: "85%+ Gross Margin",
-                  desc: "Our tech stack costs ₹7K/month per client. That means sustainable growth for us and affordable pricing for you.",
+                  desc: "Most clients see ROI within the first month. The system is designed to recover its own cost from missed-call recovery alone — before any new revenue.",
                   color: P.accent2,
                 },
               ].map((v, i) => (
@@ -910,7 +895,7 @@ export default function About() {
                     marginTop: 16,
                   }}
                 >
-                  India + Germany · Hindi · English · Deutsch
+                  Available across Europe · GDPR-compliant
                 </p>
               </div>
             </Reveal>
@@ -940,7 +925,7 @@ export default function About() {
             }}
           >
             <p style={{ fontSize: 13, color: P.muted }}>
-              © 2026 Cogniado. AI automation agency. India & Germany.
+              © 2026 Cogniado. AI automation for European service businesses.
             </p>
             <p style={{ fontSize: 13, color: P.muted }}>
               Built with AI. Powered by results.
