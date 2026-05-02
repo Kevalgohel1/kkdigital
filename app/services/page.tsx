@@ -440,7 +440,7 @@ export default function Services() {
         {/* ═══ FOOTER ═══ */}
         <footer style={{ position: "relative", zIndex: 1, background: "rgba(255,255,255,0.5)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderTop: `1px solid ${P.border}`, padding: "32px 0" }}>
           <div style={{ ...wrap, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation for European service businesses.</p>
+            <p style={{ fontSize: 13, color: P.muted }}><>© 2026 Cogniado. AI automation for European service businesses. · <a href="/impressum" style={{ color: "inherit", textDecoration: "underline" }}>Impressum</a> · <a href="/datenschutz" style={{ color: "inherit", textDecoration: "underline" }}>Privacy</a></></p>
             <p style={{ fontSize: 13, color: P.muted }}>Built with AI. Powered by results.</p>
           </div>
         </footer>

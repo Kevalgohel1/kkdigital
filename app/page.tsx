@@ -638,7 +638,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ ...wrap, marginTop: 36, paddingTop: 20, borderTop: `1px solid ${P.border}`, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation for European service businesses.</p>
+            <p style={{ fontSize: 13, color: P.muted }}><>© 2026 Cogniado. AI automation for European service businesses. · <a href="/impressum" style={{ color: "inherit", textDecoration: "underline" }}>Impressum</a> · <a href="/datenschutz" style={{ color: "inherit", textDecoration: "underline" }}>Privacy</a></></p>
             <p style={{ fontSize: 13, color: P.muted }}>Built with AI. Powered by results.</p>
           </div>
         </footer>

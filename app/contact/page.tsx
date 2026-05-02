@@ -691,7 +691,7 @@ export default function Contact() {
             }}
           >
             <p style={{ fontSize: 13, color: P.muted }}>
-              © 2026 Cogniado. AI automation for European service businesses.
+              <>© 2026 Cogniado. AI automation for European service businesses. · <a href="/impressum" style={{ color: "inherit", textDecoration: "underline" }}>Impressum</a> · <a href="/datenschutz" style={{ color: "inherit", textDecoration: "underline" }}>Privacy</a></>
             </p>
             <p style={{ fontSize: 13, color: P.muted }}>
               Built with AI. Powered by results.
