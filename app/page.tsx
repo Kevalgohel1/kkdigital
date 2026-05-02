@@ -223,13 +223,13 @@ const ico = {
    DATA
    ═══════════════════════════════════════════ */
 
-const NICHES = ["Dental Clinics", "Hair Salons", "Real Estate", "Legal Firms", "Hospitals", "Zahnarztpraxen"];
+const NICHES = ["Dental Clinics", "Vet Clinics", "Hair Salons", "Beauty Spas", "Real Estate", "Legal Firms"];
 
 const STATS = [
-  { value: "43+", label: "AI Workflows" },
-  { value: "10", label: "Industries" },
-  { value: "85%+", label: "Gross Margin" },
-  { value: "24/7", label: "Always On" },
+  { value: "5–7 days", label: "Setup Time" },
+  { value: "24/7", label: "Always Answering" },
+  { value: "~10×", label: "Avg. Month-1 ROI" },
+  { value: "GDPR", label: "Built-in Compliance" },
 ];
 
 const SERVICES = [
@@ -249,15 +249,11 @@ const STEPS = [
 
 const INDUSTRIES = [
   { name: "Dental Clinics", emoji: "🦷", desc: "AI receptionist + patient reactivation" },
-  { name: "Hair Salons", emoji: "💇", desc: "Re-booking reminders + review engine" },
-  { name: "Beauty Spas", emoji: "💆", desc: "VIP flows + loyalty automation" },
-  { name: "Hospitals", emoji: "🏥", desc: "Patient reminders + AI intake" },
-  { name: "Real Estate", emoji: "🏠", desc: "Lead qualification + follow-up bot" },
-  { name: "Legal Firms", emoji: "⚖️", desc: "Case status bot + court reminders" },
-  { name: "Coaching Institutes", emoji: "📚", desc: "Enrollment nurture + attendance" },
-  { name: "Nail Studios", emoji: "💅", desc: "Appointment reminders + reviews" },
-  { name: "Zahnarztpraxen", emoji: "🇩🇪", desc: "KI-Rezeptionist auf Deutsch" },
-  { name: "Tierarztpraxen", emoji: "🐾", desc: "Termin-Erinnerungen + Nachsorge" },
+  { name: "Vet Clinics", emoji: "🐾", desc: "WhatsApp booking + vaccination reminders" },
+  { name: "Hair & Beauty", emoji: "💇", desc: "No-show recovery + auto re-booking" },
+  { name: "Physio & Wellness", emoji: "💆", desc: "Appointment reminders + intake forms" },
+  { name: "Real Estate", emoji: "🏠", desc: "Lead qualification + viewing follow-up" },
+  { name: "Legal Firms", emoji: "⚖️", desc: "Case status updates + court reminders" },
 ];
 
 const NAV_LINKS = [
@@ -349,7 +345,7 @@ export default function Home() {
         <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: scrolled ? "10px 0" : "18px 0", background: scrolled ? "rgba(255, 247, 237, 0.72)" : "transparent", backdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", WebkitBackdropFilter: scrolled ? "blur(24px) saturate(1.5)" : "none", borderBottom: scrolled ? `1px solid ${P.border}` : "1px solid transparent", transition: "all 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
           <div style={{ ...wrap, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-              <img src="/logo.png" alt="Cogniado" style={{ width: 32, height: 32, borderRadius: 8, objectFit: "cover" }} />
+              <img src="/logo.png" alt="Cogniado" style={{ width: 120, height: 36, objectFit: "contain" }} />
               <span style={{ fontSize: 18, fontWeight: 800, color: P.textDark, letterSpacing: "-0.02em" }}>Cogniado</span>
             </a>
 
@@ -461,7 +457,7 @@ export default function Home() {
             transition: "opacity 0.4s ease",
             transitionDelay: mobileMenu ? "0.4s" : "0s",
           }}>
-            India + Germany · Hindi · English · Deutsch
+            Available across Europe · GDPR-compliant
           </p>
         </div>
 
@@ -471,7 +467,7 @@ export default function Home() {
             <div style={{ opacity: heroReady ? 1 : 0, transform: heroReady ? "translateY(0)" : "translateY(30px)", transition: "all 1s cubic-bezier(0.23,1,0.32,1)" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 999, marginBottom: 28, background: P.badge, border: `1px solid ${P.badgeBorder}`, fontSize: 13, fontWeight: 600, color: P.badgeText }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: P.accent1, boxShadow: `0 0 8px ${P.accent1}40` }} />
-                AI Automation · India & Germany
+                AI Automation for European Service Businesses
               </div>
 
               <h1 className="hero-title" style={{ fontSize: "clamp(40px, 5.5vw, 68px)", fontWeight: 800, lineHeight: 1.06, letterSpacing: "-0.035em", color: P.textDark, maxWidth: 750, marginBottom: 20 }}>
@@ -561,7 +557,7 @@ export default function Home() {
                 <h2 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, letterSpacing: "-0.03em", color: P.textDark }}>Built for Service Businesses</h2>
               </div>
             </Reveal>
-            <div ref={industriesAnim.ref} className="grid-industries" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 10 }}>
+            <div ref={industriesAnim.ref} className="grid-industries" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
               {INDUSTRIES.map((ind, i) => (
                 <GlassCard key={i} style={{ padding: "22px 16px", textAlign: "center", opacity: industriesAnim.visible[i] ? 1 : 0, transform: industriesAnim.visible[i] ? "translateY(0)" : "translateY(16px)", transition: "all 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
                   <div style={{ fontSize: 28, marginBottom: 8 }}>{ind.emoji}</div>
@@ -582,38 +578,21 @@ export default function Home() {
                 <h2 style={{ fontSize: "clamp(30px, 4vw, 46px)", fontWeight: 800, letterSpacing: "-0.03em", color: P.textDark }}>Simple. Transparent. No Surprises.</h2>
               </div>
             </Reveal>
-            <div className="grid-pricing" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, maxWidth: 820, margin: "0 auto" }}>
-              {/* India */}
+            <div className="grid-pricing" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 20, maxWidth: 460, margin: "0 auto" }}>
+              {/* Single EUR pricing tier */}
               <Reveal>
                 <GlassCard hover={false} style={{ padding: "40px 32px" }}>
-                  <div style={{ display: "inline-block", padding: "5px 14px", borderRadius: 999, background: P.badge, border: `1px solid ${P.badgeBorder}`, fontSize: 12, fontWeight: 700, color: P.accent1, marginBottom: 20 }}>🇮🇳 India</div>
-                  <div style={{ fontSize: 42, fontWeight: 800, color: P.textDark, letterSpacing: "-0.03em" }}>
-                    ₹40K–60K<span style={{ fontSize: 17, fontWeight: 500, color: P.muted }}>/month</span>
-                  </div>
-                  <p style={{ fontSize: 14, color: P.muted, marginTop: 6, marginBottom: 24 }}>+ ₹25,000 one-time setup</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                    {["AI Voice Agent 24/7", "WhatsApp Automation", "Auto Review Engine", "Patient Reactivation", "Owner Dashboard"].map((f) => (
-                      <div key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: P.text }}>{ico.check} {f}</div>
-                    ))}
-                  </div>
-                  <CapsuleBtn primary href="/contact" style={{ marginTop: 28, width: "100%", justifyContent: "center" }}>Get Started</CapsuleBtn>
-                </GlassCard>
-              </Reveal>
-
-              {/* Germany */}
-              <Reveal>
-                <GlassCard hover={false} style={{ padding: "40px 32px" }}>
-                  <div style={{ display: "inline-block", padding: "5px 14px", borderRadius: 999, background: "#FFF7ED", border: "1px solid #FED7AA", fontSize: 12, fontWeight: 700, color: P.accent3, marginBottom: 20 }}>🇩🇪 Germany</div>
+                  <div style={{ display: "inline-block", padding: "5px 14px", borderRadius: 999, background: P.badge, border: `1px solid ${P.badgeBorder}`, fontSize: 12, fontWeight: 700, color: P.accent1, marginBottom: 20 }}>All-in-one</div>
                   <div style={{ fontSize: 42, fontWeight: 800, color: P.textDark, letterSpacing: "-0.03em" }}>
                     €500–800<span style={{ fontSize: 17, fontWeight: 500, color: P.muted }}>/month</span>
                   </div>
                   <p style={{ fontSize: 14, color: P.muted, marginTop: 6, marginBottom: 24 }}>+ €200 one-time setup</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                    {["KI-Rezeptionist (DE/EN)", "WhatsApp-Automatisierung", "Bewertungs-Engine", "Patienten-Reaktivierung", "Inhaber-Dashboard"].map((f) => (
+                    {["AI Voice Agent 24/7", "WhatsApp Automation", "Auto Review Engine", "Patient Reactivation", "Owner Dashboard", "GDPR-compliant infrastructure"].map((f) => (
                       <div key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: P.text }}>{ico.check} {f}</div>
                     ))}
                   </div>
-                  <CapsuleBtn primary href="/contact" style={{ marginTop: 28, width: "100%", justifyContent: "center" }}>Jetzt Starten</CapsuleBtn>
+                  <CapsuleBtn primary href="/contact" style={{ marginTop: 28, width: "100%", justifyContent: "center" }}>Get Started</CapsuleBtn>
                 </GlassCard>
               </Reveal>
             </div>
@@ -627,10 +606,10 @@ export default function Home() {
               <div style={{ borderRadius: 26, padding: "60px 44px", textAlign: "center", background: P.card, backdropFilter: "blur(24px) saturate(1.5)", WebkitBackdropFilter: "blur(24px) saturate(1.5)", border: `1px solid ${P.border}`, boxShadow: P.shadow, position: "relative", overflow: "hidden" }}>
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, ${P.highlight}, transparent)` }} />
                 <div style={{ position: "absolute", bottom: -120, left: "20%", right: "20%", height: 200, background: "radial-gradient(ellipse, rgba(59,130,246,0.06), transparent)", filter: "blur(40px)", pointerEvents: "none" }} />
-                <h2 style={{ fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 800, letterSpacing: "-0.03em", color: P.textDark, marginBottom: 14 }}>Stop Losing ₹5,000 Per Missed Call.</h2>
+                <h2 style={{ fontSize: "clamp(26px, 4vw, 40px)", fontWeight: 800, letterSpacing: "-0.03em", color: P.textDark, marginBottom: 14 }}>Stop Losing €150 Per Missed Call.</h2>
                 <p style={{ fontSize: 17, color: P.muted, maxWidth: 480, marginInline: "auto", marginBottom: 32, lineHeight: 1.65 }}>Book a free 20-minute discovery call. We&apos;ll show you exactly how many patients you&apos;re losing — and how our AI recovers them.</p>
                 <CapsuleBtn primary style={{ fontSize: 17, padding: "16px 40px" }}>Book Your Free Call {ico.arrow}</CapsuleBtn>
-                <p style={{ fontSize: 13, color: P.muted, marginTop: 16 }}>India + Germany · Hindi · English · Deutsch</p>
+                <p style={{ fontSize: 13, color: P.muted, marginTop: 16 }}>Available across Europe · GDPR-compliant</p>
               </div>
             </Reveal>
           </div>
@@ -644,7 +623,7 @@ export default function Home() {
                 <div style={{ width: 32, height: 32, borderRadius: 8, background: P.grad, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 800, color: "#fff" }}>C</div>
                 <span style={{ fontSize: 16, fontWeight: 800, color: P.textDark }}>Cogniado</span>
               </div>
-              <p style={{ fontSize: 14, color: P.muted, lineHeight: 1.7, maxWidth: 340 }}>AI automation for service businesses in India and Germany. Built by performance marketers who understand revenue, not just technology.</p>
+              <p style={{ fontSize: 14, color: P.muted, lineHeight: 1.7, maxWidth: 340 }}>AI automation for European service businesses. Built by people who understand revenue, not just technology.</p>
             </div>
             <div>
               <p style={{ fontSize: 13, fontWeight: 700, background: P.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 16, textTransform: "uppercase", letterSpacing: "0.08em" }}>Services</p>
@@ -654,13 +633,12 @@ export default function Home() {
             </div>
             <div>
               <p style={{ fontSize: 13, fontWeight: 700, background: P.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 16, textTransform: "uppercase", letterSpacing: "0.08em" }}>Contact</p>
-              <p style={{ fontSize: 14, color: P.muted, marginBottom: 10 }}>India + Germany</p>
-              <p style={{ fontSize: 14, color: P.muted, marginBottom: 10 }}>WhatsApp: +91 8000309011</p>
-              <p style={{ fontSize: 14, color: P.muted }}>cogniado@gmail.com</p>
+              <p style={{ fontSize: 14, color: P.muted, marginBottom: 10 }}>Europe · GDPR-compliant</p>
+              <p style={{ fontSize: 14, color: P.muted }}>hello@cogniado.com</p>
             </div>
           </div>
           <div style={{ ...wrap, marginTop: 36, paddingTop: 20, borderTop: `1px solid ${P.border}`, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation agency. India & Germany.</p>
+            <p style={{ fontSize: 13, color: P.muted }}>© 2026 Cogniado. AI automation for European service businesses.</p>
             <p style={{ fontSize: 13, color: P.muted }}>Built with AI. Powered by results.</p>
           </div>
         </footer>

@@ -254,23 +254,7 @@ export default function Contact() {
                 textDecoration: "none",
               }}
             >
-              <div
-                style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: 10,
-                  background: P.grad,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 13,
-                  fontWeight: 800,
-                  color: "#fff",
-                  boxShadow: "0 2px 10px rgba(59,130,246,0.2)",
-                }}
-              >
-                KK
-              </div>
+              <img src="/logo.png" alt="Cogniado" style={{ width: 120, height: 36, objectFit: "contain" }} />
               <span
                 style={{
                   fontSize: 18,
@@ -490,11 +474,11 @@ export default function Contact() {
                       </div>
 
                       <div style={{ marginBottom: 18 }}>
-                        <label style={labelStyle}>Phone (WhatsApp)</label>
+                        <label style={labelStyle}>Phone (optional)</label>
                         <input
                           type="tel"
                           name="phone"
-                          placeholder="+91 XXXXX XXXXX"
+                          placeholder="+49 XXX XXXXXXX (optional)"
                           style={inputStyle}
                         />
                       </div>
@@ -583,76 +567,6 @@ export default function Contact() {
                       Other Ways to Reach Us
                     </h3>
 
-                    {/* WhatsApp */}
-                    <div style={{ marginBottom: 28 }}>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 12,
-                          marginBottom: 8,
-                        }}
-                      >
-                        <div
-                          style={{
-                            width: 40,
-                            height: 40,
-                            borderRadius: 12,
-                            background: "rgba(37, 211, 102, 0.1)",
-                            border: "1px solid rgba(37, 211, 102, 0.2)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="#25D366"
-                          >
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <p
-                            style={{
-                              fontSize: 14,
-                              fontWeight: 600,
-                              color: P.textDark,
-                            }}
-                          >
-                            WhatsApp
-                          </p>
-                          <p style={{ fontSize: 13, color: P.muted }}>
-                            Fastest way to reach us
-                          </p>
-                        </div>
-                      </div>
-                      <a
-                        href="https://wa.me/918000309011"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: 6,
-                          padding: "10px 20px",
-                          borderRadius: 999,
-                          background: "rgba(37, 211, 102, 0.1)",
-                          border: "1px solid rgba(37, 211, 102, 0.2)",
-                          color: "#25D366",
-                          fontSize: 14,
-                          fontWeight: 600,
-                          fontFamily: FONT,
-                          textDecoration: "none",
-                          transition: "all 0.3s ease",
-                        }}
-                      >
-                        Chat on WhatsApp →
-                      </a>
-                    </div>
-
                     {/* Email */}
                     <div style={{ marginBottom: 28 }}>
                       <div
@@ -706,58 +620,7 @@ export default function Contact() {
                             Email
                           </p>
                           <p style={{ fontSize: 13, color: P.muted }}>
-                            cogniado@gmail.com
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Phone */}
-                    <div style={{ marginBottom: 28 }}>
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 12,
-                        }}
-                      >
-                        <div
-                          style={{
-                            width: 40,
-                            height: 40,
-                            borderRadius: 12,
-                            background: `${P.accent2}0A`,
-                            border: `1px solid ${P.accent2}18`,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke={P.accent2}
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <p
-                            style={{
-                              fontSize: 14,
-                              fontWeight: 600,
-                              color: P.textDark,
-                            }}
-                          >
-                            Phone
-                          </p>
-                          <p style={{ fontSize: 13, color: P.muted }}>
-                            +91 8000309011
+                            hello@cogniado.com
                           </p>
                         </div>
                       </div>
@@ -794,10 +657,9 @@ export default function Contact() {
                         lineHeight: 1.7,
                       }}
                     >
-                      India + Germany · Hindi · English · Deutsch
+                      Across Europe · GDPR-compliant
                       <br />
-                      Dental Clinics · Hair Salons · Real Estate · Legal Firms ·
-                      Hospitals · Coaching Institutes
+                      Dental Clinics · Vet Clinics · Hair & Beauty · Physio & Wellness · Real Estate · Legal Firms
                     </p>
                   </div>
                 </div>
@@ -829,7 +691,7 @@ export default function Contact() {
             }}
           >
             <p style={{ fontSize: 13, color: P.muted }}>
-              © 2026 Cogniado. AI automation agency. India & Germany.
+              © 2026 Cogniado. AI automation for European service businesses.
             </p>
             <p style={{ fontSize: 13, color: P.muted }}>
               Built with AI. Powered by results.

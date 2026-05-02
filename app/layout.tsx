@@ -3,21 +3,21 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cogniado | AI Automation Agency India & Germany",
+  title: "Cogniado | AI Automation for European Service Businesses",
   description:
-    "AI voice agents, WhatsApp automation, review engines & patient reactivation for dental clinics, salons, and service businesses. India + Germany.",
+    "AI voice agents, WhatsApp automation, review engines and patient reactivation for European clinics, salons, and service businesses.",
   keywords: [
-    "AI Automation India",
+    "AI Automation Europe",
     "AI Voice Agent",
     "WhatsApp Automation",
     "Dental Clinic AI",
     "Cogniado",
-    "AI Automation Germany",
+    "European Service Businesses",
   ],
   openGraph: {
     title: "Cogniado — AI Automation for Service Businesses",
     description:
-      "Never miss a patient call again. AI voice agents, WhatsApp automation, and review engines for clinics and service businesses.",
+      "Never miss a patient call again. AI voice agents, WhatsApp automation, and review engines for European service businesses.",
     type: "website",
   },
   verification: {
